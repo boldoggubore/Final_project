@@ -115,3 +115,6 @@ body {
   outline: none;
   text-decoration: none;
 }
+.space_25vw {
+  width: 25vw;
+}
