@@ -3,11 +3,11 @@ import RightSide from './components/rightSide';
 import LeftSide from './components/leftSide';
 import './login.css'
 
-function App() {
+function Login() {
   return <div className='main'>
     <LeftSide />
     <RightSide />
   </div>;
 };
 
-export default App;
+export default Login;

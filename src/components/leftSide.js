@@ -8,17 +8,23 @@ function LeftSide() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const userData = {
+      username: username,
+      password: password,
+    };
     try {
-      const response = await axios.post("http://localhost:3001/login", {
-        username,
-        password,
-      });
+      console.log(userData);
+      const response = await axios.post(
+        "http://localhost:3001/login",
+        userData
+      );
       const token = response.data.token;
       localStorage.setItem("token", token); // Store token in localStorage
       // Redirect to dashboard or another protected route
-      window.location.href = "/home";
+      window.location.href = "/";
     } catch (error) {
-      setError("Invalid username or password");
+      setError("Invalid email or password");
+      console.log("400");
     }
   };
 
