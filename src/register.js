@@ -18,8 +18,9 @@ function Register() {
         "http://localhost:3001/register",
         userData
       );
+      console.log(response.data.message);
       // Redirect to dashboard or another protected route
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (error) {
       setError("try again");
       console.log("400");

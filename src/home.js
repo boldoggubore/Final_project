@@ -32,8 +32,6 @@ const Home = (props) => {
                 Your email address is {email}
             </div> : <div/>)}
         </div>
-
-
     </div>
 }
 
